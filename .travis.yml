@@ -6,4 +6,5 @@ install:
   - npm install --save-dev jest
   - npm install --save-dev jest-fetch-mock
 script:
+  - npm run build
   - npm test
