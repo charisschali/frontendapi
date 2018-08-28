@@ -29,7 +29,7 @@ const signUp = (data) => {
         window.location.assign("/signin"); // change this to assign() so it can be mocked
       } else {
         let msg = Object.values(data);
-        document.getElementById("white").innerHTML = msg;
+        document.getElementById("white").innerHTML = msg;z
       }
 
     })

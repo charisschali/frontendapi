@@ -26,12 +26,12 @@ fetch('https://diaryapi-v2.herokuapp.com/mydiary/v1/entries',{
         .then(data => {
             if(data.message === "successfully added"){
                 let msg = data.message;
-                document.getElementById("info").innerHTML = msg;
+                document.getElementById("success").innerHTML = msg;
                 window.location.assign("/home");
             }
             else{
                 let msg = Object.values(data);
-                document.getElementById("info").innerHTML = msg;
+                document.getElementById("fail").innerHTML = msg;
             }
         })
 // catches any error that may occur.
