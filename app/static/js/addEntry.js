@@ -29,9 +29,8 @@ fetch('https://diaryapi-v2.herokuapp.com/mydiary/v1/entries',{
                 document.getElementById("success").innerHTML = msg;
                 window.location.assign("/home");
             }
-            else{
-                let msg = Object.values(data);
-                document.getElementById("fail").innerHTML = msg;
+            else if(data.message === "Title already exist, use a different one.") {
+                document.getElementById("fail").innerHTML = data.message;
             }
         })
 // catches any error that may occur.
