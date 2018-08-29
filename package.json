@@ -5,7 +5,8 @@
   "main": "sum.js",
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch *test.js"
+    "watch": "jest --watch *test.js",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +18,10 @@
     "jest-fetch-mock": "^1.6.5"
   },
   "dependencies": {
+    "coveralls": "^3.0.2",
     "node-fetch": "^2.2.0"
   },
+  {},
   "jest": {
     "collectCoverage": false,
     "coverageReporters": [
