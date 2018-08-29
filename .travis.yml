@@ -1,9 +1,24 @@
+# language: node_js
+# node_js:
+#   - "stable"
+# install:
+#   - npm install node-fetch --save
+#   - npm install --save-dev jest
+#   - npm install --save-dev jest-fetch-mock
+# script:
+#   - npm test
+
+sudo: false
 language: node_js
 node_js:
-  - "stable"
+- '8'
+cache:
+  directories:
+  - node_modules
+before_install:
+- npm update
 install:
-  - npm install node-fetch --save
-  - npm install --save-dev jest
-  - npm install --save-dev jest-fetch-mock
+- npm install
 script:
-  - npm test
+- npm test
+- npm run coveralls
